@@ -6,6 +6,7 @@
     <title>Télécharger Outils Windows</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
         body {
             font-family: 'Roboto', sans-serif;
@@ -28,6 +29,12 @@
             width: 90%;
             max-width: 600px;
             animation: fadeIn 1s ease-in-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
 
         @keyframes fadeIn {
@@ -76,13 +83,38 @@
             background: #004494;
             transform: translateY(1px);
         }
+
+        .download-button i {
+            margin-right: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .download-button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Outils Windows</h1>
         <p>Bienvenue sur la page de téléchargement de l'outil Windows. Cet outil vous permet de réaliser diverses tâches de maintenance et de configuration sur votre système Windows.</p>
-        <a href="https://drive.usercontent.google.com/download?id=12qXHaaoGq8sh-vfRuK3edn8Dd9LyMJLU&export=download&authuser=0&confirm=t&uuid=59d71a2a-f837-4214-be6b-dbb594742a35&at=APZUnTUZKOlgHlZc8sNDifBMoh6V:1719324766906" class="download-button" download>Télécharger Outils Windows</a>
+        <a href="https://drive.usercontent.google.com/download?id=12qXHaaoGq8sh-vfRuK3edn8Dd9LyMJLU&export=download&authuser=0&confirm=t&uuid=59d71a2a-f837-4214-be6b-dbb594742a35&at=APZUnTUZKOlgHlZc8sNDifBMoh6V:1719324766906" class="download-button" download>
+            <i class="fas fa-download"></i>Télécharger Outils Windows
+        </a>
     </div>
 </body>
 </html>
