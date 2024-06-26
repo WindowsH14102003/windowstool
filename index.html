@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Télécharger Outils Windows</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background: linear-gradient(to right, #6a11cb, #2575fc);
             margin: 0;
             padding: 0;
@@ -16,25 +18,42 @@
             height: 100vh;
             color: #fff;
         }
+
         .container {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             padding: 40px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             border-radius: 10px;
             text-align: center;
-            width: 80%;
+            width: 90%;
             max-width: 600px;
+            animation: fadeIn 1s ease-in-out;
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
         h1 {
             color: #333;
             font-size: 2.5em;
             margin-bottom: 20px;
         }
+
         p {
             color: #555;
             font-size: 1.1em;
             margin-bottom: 30px;
+            line-height: 1.6;
         }
+
         .download-button {
             display: inline-block;
             margin-top: 20px;
@@ -44,10 +63,18 @@
             text-decoration: none;
             border-radius: 5px;
             font-size: 1.2em;
-            transition: background 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+            transition: background 0.3s ease, transform 0.3s ease;
         }
+
         .download-button:hover {
             background: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        .download-button:active {
+            background: #004494;
+            transform: translateY(1px);
         }
     </style>
 </head>
